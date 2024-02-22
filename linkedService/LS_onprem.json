@@ -1,0 +1,21 @@
+{
+	"name": "LS_onprem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"DataBase": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DESKTOP-0T4U7M9;initial catalog=@{linkedService().DataBase};user id=morthala1",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhZTU5ZmI0MS01YzgyLTQ0MzItYTkyNS1kNDM5YjhmNzA1YWEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-selfhosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
