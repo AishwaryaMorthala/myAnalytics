@@ -1,0 +1,9 @@
+{
+	"name": "adftpracticetestdev",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0b5e523f-9a62-493e-b7c0-c84b05cdeb1a",
+		"tenantId": "5940bf63-3163-4a80-896f-af61b820da5f"
+	}
+}

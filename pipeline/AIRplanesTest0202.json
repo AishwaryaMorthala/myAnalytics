@@ -1,0 +1,42 @@
+{
+	"name": "AIRplanesTest0202",
+	"properties": {
+		"activities": [
+			{
+				"name": "Notebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/aishwaryareddymorthala_gmail.com#ext#@aishwaryareddymorthalagmail.onmicrosoft.com/spark/Airlines Data Practice Analysis",
+					"baseParameters": {
+						"ADF_input": {
+							"value": "@pipeline().parameters.FilePath",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_databricks",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"FilePath": {
+				"type": "string",
+				"defaultValue": "/mnt/adlstestcontainer/csvfiles/AirlinesData.csv"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-02-02T21:00:31Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
